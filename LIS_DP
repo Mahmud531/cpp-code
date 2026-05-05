@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>// Longest Increasing Subsequence
+using namespace std;
+typedef long long ll;
+#define faster ios::sync_with_stdio(0);cin.tie(0);
+
+void solve(){
+    int n;cin>>n;
+    vector<int>ar(n);
+    for(auto &x:ar) cin>>x;
+
+    vector<int>tails;
+    tails.push_back(ar[0]);
+
+    for(int i = 1;i<n;i++){
+        
+        if(tails.back()<ar[i]) tails.push_back(ar[i]);
+        else{
+            auto x = lower_bound(tails.begin(),tails.end(), ar[i]);
+            *x = ar[i]; 
+        }
+    }
+    cout<<tails.size()<<'\n';
+
+
+}
+
+int main(){
+    faster;
+    solve();
+}	
