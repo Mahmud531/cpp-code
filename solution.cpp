@@ -1,3 +1,12 @@
-#include<iostream>
-int main(){ std::cout<<"hello"; return 0; }
-void binarySearch(){ //code }
+#include <iostream>
+void binarySearch()
+{ // code }
+    int main()
+    {
+        ios::sync_with_stdio;
+        cin.tie(0);
+        cout.tie(0);
+
+        std::cout << "hello";
+        return 0;
+    }
